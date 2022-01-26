@@ -1,0 +1,57 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("DOGZU HUB", "DarkTheme")
+local Tab = Window:NewTab("AUTOFARM")
+local Section = Tab:NewSection("AUTOFARM")
+
+Section:NewToggle("AUTOFARM", "ToggleInfo", function(state)
+    if state then
+        _G.Autofarm = true
+
+ while _G.Autofarm do
+     wait()
+
+local args = {
+    [1] = {
+        [1] = "GainMuscle"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+end
+    else
+        _G.Autofarm = false
+
+ while _G.Autofarm do
+     wait()
+
+local args = {
+    [1] = {
+        [1] = "GainMuscle"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+end
+    end
+end)
+Section:NewToggle("Autosell", "ToggleInfo", function(state)
+    if state then
+        _G.Autosell = true
+
+ while _G.Autosell do
+     wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-647.169678, -53.877491, 1837.8064, -0.396422982, -8.88663791e-08, -0.918067992, 2.45877292e-08, 1, -1.07414181e-07, 0.918067992, -6.51546515e-08, -0.396422982)
+
+end
+    else
+        _G.Autosell = false
+
+ while _G.Autosell do
+     wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-647.169678, -53.877491, 1837.8064, -0.396422982, -8.88663791e-08, -0.918067992, 2.45877292e-08, 1, -1.07414181e-07, 0.918067992, -6.51546515e-08, -0.396422982)
+
+end
+    end
+end)
